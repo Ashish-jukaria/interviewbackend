@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd interviewbackend
-            git pull origin main
+            git pull origin master
             npm install
             npm run build  # If applicable
             pm2 restart all
