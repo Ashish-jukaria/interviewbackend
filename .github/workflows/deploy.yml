@@ -21,6 +21,8 @@ jobs:
           script: |
             cd interviewbackend/interviewbackend
             git pull origin master
+            npm -v
+            node -v
             npm install
             npm run build  # If applicable
             pm2 restart all
