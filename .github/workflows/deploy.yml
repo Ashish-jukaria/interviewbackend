@@ -19,6 +19,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            source ~/.bashrc   # or source ~/.profile, ~/.bash_profile, etc.
             cd interviewbackend/interviewbackend
             git pull origin master
             npm -v
