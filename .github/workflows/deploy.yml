@@ -19,7 +19,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/app  # Change this path if needed
+            cd interviewbackend
             git pull origin main
             npm install
             npm run build  # If applicable
