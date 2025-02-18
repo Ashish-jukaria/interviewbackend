@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc -b",
     "start": "node ./dist/index.js",
-    "dev": "nodemon --watch src --exec 'npm run build && node ./dist/index.js'"
+    "dev": "nodemon --watch src --ext ts --exec \"npm run build && npm start\""
   },
   "keywords": [],
   "author": "",
@@ -20,10 +20,16 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@pinecone-database/pinecone": "^4.1.0",
     "@prisma/client": "^6.1.0",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.8",
+    "axios": "^1.7.9",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.13.1",
     "zod": "^3.24.1"
   }

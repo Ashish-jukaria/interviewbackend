@@ -6,6 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["native", "windows"]
 }
 
 datasource db {
@@ -16,6 +17,29 @@ datasource db {
 model User {
   id Int @id @default(autoincrement()) 
   username String @unique
-  password String 
+  password String
+  histories History[]
+  users UserLevel[] // Added this to define the relationship
+ 
+
+}
+
+model History {
+  id Int @id @default(autoincrement())
+  user User @relation(fields: [user_id], references: [id])
+  user_id Int 
+  topic String
+  level String
+  question String
+  correctanswer String
+  useranswer String
+}
+
+model UserLevel {
+  id Int @id @default(autoincrement())
+  user User @relation(fields: [user_id], references: [id])
+  user_id Int
+  level String
+  topic String
 
 }
