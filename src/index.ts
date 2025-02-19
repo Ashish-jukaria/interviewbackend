@@ -41,7 +41,9 @@ async function initPinecone() {
     }
 }
 
-
+app.get('/hello',(req,res)=>{
+    res.send("hello i am Ashish It is to test my api")
+})
 app.post("/login", async(req,res)=>{
 
     try{
