@@ -26,7 +26,7 @@ async function initPinecone() {
     try {
         console.log("Initializing Pinecone client...");
         const pinecone = new Pinecone({
-            apiKey: 'pcsk_2SVBVx_3j69xCqp13wkErqv6F3aLGhB9hBy8RBWNUijZpDFkgrRRUdywT48qw7ch3RLXjU'
+            apiKey: ''
         });
         
         // Check if index exists
